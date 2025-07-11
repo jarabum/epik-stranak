@@ -1,7 +1,9 @@
-console.log("jdeme klikat")
+console.log("jdeme klikat");
 
-let cislo = 0
+document.getElementById("cislo").style.visibility = "hidden";
+let cislo = 0;
 function pridejcislo() {
-    cislo++
+    cislo++;
+    document.getElementById("cislo").style.visibility = "visible";
     document.getElementById("cislo").textContent = cislo;
 }
