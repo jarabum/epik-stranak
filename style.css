@@ -47,5 +47,11 @@ button {
     width: 125px;
     height: 55px;
     padding: 5px;
-    margin: 25px;
+    margin: 10px;
+    transition-duration: 250ms;
+}
+button:hover {
+    width: 155px;
+    height: 85px;
+    transition-duration: 250ms;
 }
