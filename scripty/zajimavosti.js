@@ -12,4 +12,9 @@ const zajimavosti = [
     "google se prvne jmenoval 'backrub'",
     "v mongolsku je vice koni nez lidi",
     "vcely dokazou poznat oblicej cloveka"
-]
+];
+
+function zajimavost() {
+    const nahodnost = Math.floor(Math.random() * zajimavosti.length);
+    document.getElementById('zajimavost').textContent = zajimavosti[nahodnost];
+}
