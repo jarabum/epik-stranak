@@ -1,3 +1,9 @@
 .streddiv {
     text-align: center;
 }
+.neviditelnost {
+    visibility: hidden;
+}
+.normalnitext {
+    color: black;
+}
