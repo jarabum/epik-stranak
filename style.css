@@ -5,8 +5,8 @@
     visibility: hidden;
 }
 .normalnitext {
-    color: black;
     text-decoration: none;
+    color: black;
 }
 .vlevonahoru {
     text-align: left;
@@ -30,5 +30,13 @@
 .specialcudlik2:hover {
     width: 475px;
     height: 450px;
+    transition-duration: 250ms;  
+}
+.chachaobrazek {
+    width: 415px;
+    transition-duration: 250ms;
+}
+.chachaobrazek:hover {
+    width: 465px;
     transition-duration: 250ms;
 }
