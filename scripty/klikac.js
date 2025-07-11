@@ -6,4 +6,5 @@ function pridejcislo() {
     cislo++;
     document.getElementById("cislo").style.visibility = "visible";
     document.getElementById("cislo").textContent = cislo;
+    console.log("klik")
 }
