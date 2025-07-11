@@ -6,4 +6,29 @@
 }
 .normalnitext {
     color: black;
+    text-decoration: none;
+}
+.vlevonahoru {
+    text-align: left;
+    text-align: start; 
+}
+.specialcudlik1 {
+    width: 400px;
+    height: 400px;
+    transition-duration: 250ms;
+}
+.specialcudlik1:hover {
+    width: 450px;
+    height: 450px;
+    transition-duration: 250ms;
+}
+.specialcudlik2 {
+    width: 425px;
+    height: 400px;
+    transition-duration: 250ms;
+}
+.specialcudlik2:hover {
+    width: 475px;
+    height: 450px;
+    transition-duration: 250ms;
 }
