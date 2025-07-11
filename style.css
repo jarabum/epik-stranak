@@ -4,9 +4,12 @@
 .neviditelnost {
     visibility: hidden;
 }
-.normalnitext {
+a,
+a:visited,
+a:hover,
+a:active {
+    color: #333333;
     text-decoration: none;
-    color: black;
 }
 .vlevonahoru {
     text-align: left;
@@ -39,4 +42,10 @@
 .chachaobrazek:hover {
     width: 465px;
     transition-duration: 250ms;
+}
+button {
+    width: 125px;
+    height: 55px;
+    padding: 5px;
+    margin: 25px;
 }
