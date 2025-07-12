@@ -16,3 +16,9 @@ function odecti() {
     document.getElementById("cislo").textContent = cislo;
     console.log("odecteno");
 }
+
+function resetuj() {
+    cislo = 0;
+    document.getElementById("cislo").textContent = cislo;
+    console.log("resetovano");
+}
