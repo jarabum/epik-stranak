@@ -1,30 +1,36 @@
 console.log("tik tak ubiha ti cas tak na co tu cucis");
 
-let intervalID;
-const zivotnost = 72;
+let intervalId;
+    const defaultExpectancy = 72; // Life expectancy is automatic and hidden
 
-function zacitOdpocet() {
-    clearInterval(intervalID);
-    const narozeni = new Date(document.getElementById('datum_narozeni').value);
-    console.log(narozeni)
-    if (isNaN(narozeni) || narozeni == "Invalid Date") {
-        document.getElementById('odpocet').textContent = "spatnej datum narozeni";
+    function zacitOdpocet() {
+      clearInterval(intervalId);
+      const birthdate = new Date(document.getElementById('datum_narozeni').value);
+      if (isNaN(birthdate) || birthdate == "Invalid Date") {
+        document.getElementById('odpocet').textContent = "spatnej datum";
         return;
-    }
-    const datumsmrti = new Date(narozeni);
-    datumsmrti.setFullYear(datumsmrti.getFullYear() + zivotnost);
+      }
+      const deathDate = new Date(birthdate);
+      deathDate.setFullYear(deathDate.getFullYear() + defaultExpectancy);
 
-    function updatniOdpocet() {
-        const ted = new Date();
-        let diff = datumsmrti - now;
+      function updateCountdown() {
+        const now = new Date();
+        let diff = deathDate - now;
         if (diff < 0) diff = 0;
-        const vteriny = Math.floor(diff / 1000);
-        document.getElementById('odpocet').textContent = `${vteriny.toLocaleString()} vterin zbiva`;
-
+        const seconds = Math.floor(diff / 1000);
+        document.getElementById('odpocet').textContent = `${seconds.toLocaleString()} vterin zbiva`;
+        // Play tick sound
         const tick = document.getElementById('tick');
         tick.currentTime = 0;
         tick.play();
       }
-      updatniOdpocet();
-      intervalId = setInterval(updatniOdpocet, 1000);
-}
+      updateCountdown();
+      intervalId = setInterval(updateCountdown, 1000);
+
+      document.getElementById("smazat").style.display = "none";
+      document.getElementById("smazat2").style.display = "none";
+      document.getElementById("smazat3").style.display = "none";
+      document.getElementById("smazat4").style.display = "none";
+      document.getElementById("smazat5").style.display = "none";
+      document.getElementById("smazat6").style.display = "none";
+    }
