@@ -55,3 +55,7 @@ button:hover {
     height: 85px;
     transition-duration: 250ms;
 }
+input {
+    border: none;
+    appearance: none;
+}
