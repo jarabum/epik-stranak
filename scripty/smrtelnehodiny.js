@@ -1,7 +1,7 @@
 console.log("tik tak ubiha ti cas tak na co tu cucis");
 
 let intervalId;
-    const defaultExpectancy = 72; // Life expectancy is automatic and hidden
+    const defaultExpectancy = 79;
 
     function zacitOdpocet() {
       clearInterval(intervalId);
