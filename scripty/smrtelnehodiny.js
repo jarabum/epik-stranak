@@ -18,7 +18,7 @@ let intervalId;
         let diff = deathDate - now;
         if (diff < 0) diff = 0;
         const seconds = Math.floor(diff / 1000);
-        document.getElementById('odpocet').textContent = `${seconds.toLocaleString()} vterin zbiva`;
+        document.getElementById('odpocet').textContent = `${seconds.toLocaleString()} vterin zbyva`;
         // Play tick sound
         const tick = document.getElementById('tick');
         tick.currentTime = 0;
