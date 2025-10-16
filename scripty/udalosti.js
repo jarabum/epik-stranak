@@ -5,7 +5,7 @@ console.log("uuu uz se tesim");
 var datum1 = new Date("Oct 30, 2025 13:30:00").getTime();
 console.log(datum1);
 
-udalost1.textContent = "simonovo galovo oslava";
+udalost1.textContent = "simonovo galovo oslava narozenin";
 cas1.textContent = "cas do oslavy";
 
 var x1 = setInterval(function() {
