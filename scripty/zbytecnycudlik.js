@@ -1,4 +1,4 @@
-textik = document.getElementById("textik")
+var textik = document.getElementById("textik")
 console.log("hlavne se uklidnime jo")
 
 textik.textContent = "hlavne neklikej nic to neudela";
