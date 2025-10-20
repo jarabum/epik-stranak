@@ -4,6 +4,8 @@ var udalost2 = document.getElementById("udalost2");
 var cas2 = document.getElementById("cas2");
 var udalost3 = document.getElementById("udalost3");
 var cas3 = document.getElementById("cas3");
+var udalost4 = document.getElementById("udalost4");
+var cas4 = document.getElementById("cas4");
 
 console.log("uuu uz se tesim");
 var datum1 = new Date("Oct 30, 2025 13:30:00").getTime();
@@ -15,12 +17,17 @@ console.log(datum2);
 var datum3 = new Date("December 24, 2025 19:00:00").getTime();
 console.log(datum3);
 
+var datum4 = new Date("December 2, 2025 10:00:00").getTime();
+console.log(datum4);
+
 udalost1.textContent = "simonovo galovo oslava narozenin";
 cas1.textContent = "cas do oslavy";
 udalost2.textContent = "konec skolniho roku";
 cas2.textContent = "cas do konce";
 udalost3.textContent = "vanoce";
 cas3.textContent = "cas do vanoc";
+udalost4.textContent = "simonovo a vaskovo narozeniny";
+cas4.textContent = "cas do narozenin";
 
 var x1 = setInterval(function() {
 
@@ -79,5 +86,25 @@ var x3 = setInterval(function() {
   if (zajakdlouho < 0) {
     clearInterval(x);
     document.getElementById("cas3").innerHTML = "je to tu!!!";
+  }
+}, 1000);
+
+var x4 = setInterval(function() {
+
+  var ted = new Date().getTime();
+
+  var zajakdlouho = datum4 - ted;
+
+  var days = Math.floor(zajakdlouho / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((zajakdlouho % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((zajakdlouho % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((zajakdlouho % (1000 * 60)) / 1000);
+
+  document.getElementById("cas4").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  if (zajakdlouho < 0) {
+    clearInterval(x);
+    document.getElementById("cas4").innerHTML = "je to tu!!!";
   }
 }, 1000);
